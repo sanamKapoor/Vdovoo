@@ -115,7 +115,6 @@ function Modal() {
     let sameUser = fetchCurrentUser(storedUsers);
     let currentVideo;
     
-
           if(data.video){
       
             currentVideo = data.video;
@@ -155,8 +154,7 @@ function Modal() {
             }
           }
     }
-
-    
+  
     localStorage.setItem('users', JSON.stringify(storedUsers)); 
   }
 
