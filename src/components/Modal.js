@@ -160,35 +160,7 @@ function Modal() {
     localStorage.setItem('users', JSON.stringify(storedUsers)); 
   }
 
-  // const removeVideo = () => {
-  //   let storedUsers = JSON.parse(localStorage.getItem('users'));
-  //   let sameUser = fetchCurrentUser(storedUsers);
-
-  //   if(data.type === 'like' && sameUser.likeVDO.length > 0){
-  //     sameUser.likeVDO.filter(video => {
-  //       if(video === data.video){
-  //         let index = sameUser.likeVDO.indexOf(video);
-  //         sameUser.likeVDO.splice(index, 1)
-  //       }
-  //     })
-  //   } else if(data.type === 'dislike' && sameUser.dislikeVDO.length > 0){
-  //     sameUser.dislikeVDO.filter(video => {
-  //       if(video === data.video){
-  //         let index = sameUser.dislikeVDO.indexOf(video);
-  //         sameUser.dislikeVDO.splice(index, 1)
-  //       }
-  //     })
-  //   }
-  //   else if(data.type === 'save' && sameUser.saveVDO.length > 0){
-  //     sameUser.saveVDO.filter(video => {
-  //       if(video === data.video){
-  //         let index = sameUser.saveVDO.indexOf(video);
-  //         sameUser.saveVDO.splice(index, 1)
-  //       }
-  //     })
-  //   }
-  // }
-
+ 
   const hideModal = e => {
     if(e.target.className === 'modal fade exampleModalCenter'){
       dispatch({ type: 'REMOVE_VIDEO' })
