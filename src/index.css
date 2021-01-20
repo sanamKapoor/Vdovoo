@@ -32,10 +32,9 @@ section{
 .submit-btn{
   background-color: rgb(39,85,111);
   color: white;
-}
-
+} 
 .submit-btn:hover{
-  color: white;
+  color: rgba(255, 255, 255, 0.904);
 }
 
 
@@ -51,11 +50,35 @@ section{
 .video-row{
   margin: 0 auto;
   display: grid;
-  grid-column-gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
 }
 
+h1{
+  font-size: 1.5rem;
+}
+
+.dropdown-toggle{
+  font-size: 1.3rem;
+}
+
+.card-title{
+  font-size: 1rem;
+}
+
+.card-img{
+  cursor: pointer;
+}
+
+.watermark{
+  background-color:  rgb(39,85,111);
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 0.9rem;
+}
 
 @media (max-width: 1500px) {
   .video-row{
@@ -81,28 +104,53 @@ section{
   } 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px){
   .video-row{
-    display: grid;
-    grid-column-gap: 1.5rem;
     grid-template-columns: 1fr; 
   } 
+}
 
-
+@media (max-width: 700px) {
+  
 .container-fluid > div{
   margin: 2%;
 }
+
+.card-title{
+  font-size: 0.9rem;
 }
 
-
+}
 
 @media (max-width: 850px){
   .login-area{
-    width: auto;
+    width: 400px;
     margin: 10vh 0;
   }
 
   section{
     height: auto;
+  }
+
+  h1{
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 530px){
+  h1{
+    font-size: 1.2rem;
+  }
+  .login-area{
+    width: auto;
+  }
+  .dropdown-toggle{
+    font-size: 1rem;
+  }
+  .card-title{
+    font-size: 0.8rem;
+  }
+  .watermark{
+    font-size: 0.7rem;
   }
 }

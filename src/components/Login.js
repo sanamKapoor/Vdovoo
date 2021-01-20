@@ -143,7 +143,7 @@ function Login() {
 
   return (
     <section>
-    <div className="row content shadow">
+    <div className="row content">
       <div className="col login-bg d-lg-block d-none"></div>
       <div className="col login-area py-md-5 py-3 bg-light d-flex flex-column justify-content-center align-items-center text-dark">
           <div className="w-100 p-lg-3 p-2">
@@ -186,7 +186,7 @@ function Login() {
               placeholder="johndoe@gmail.com" 
               className="form-control" />
               {
-                errors.email && <span className="text-danger">{errors.email.message}</span>
+                errors.email && <small className="text-danger">{errors.email.message}</small>
               }
               
               
@@ -208,13 +208,13 @@ function Login() {
               placeholder="**************" 
               className="form-control" />
               {
-                errors.password && <span className="text-danger">{errors.password.message}</span>
+                errors.password && <small className="text-danger">{errors.password.message}</small>
               }
           </div>
           {
             !islogin ? 
             <div className="my-3">
-              <label htmlFor="confirmPassword">Cofirm Password</label>
+              <label htmlFor="confirmPassword">Confirm Password</label>
               <input 
                 type="password" 
                 name="confirmPassword" 
@@ -226,13 +226,13 @@ function Login() {
                 }
                 placeholder="**************" 
                 className="form-control" />
+                { (!islogin && errors.confirmPassword) && <small className="text-danger">{errors.confirmPassword.message}</small> }
             </div>
             : 
-            <div className="my-3"></div>
+            ''
           }
-          { (!islogin && errors.confirmPassword) && <span className="text-danger">{errors.confirmPassword.message}</span> }
-
-          { err && <span className="text-danger">{err}</span>}
+          
+          { err && <small className="text-danger">{err}</small>}
           <button type="submit" className="btn w-100 p-2 mt-2 submit-btn">
             {islogin ? 'Login' : 'Sign Up'}
           </button>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useCallback, useContext, useState, useEffect } from 'react';
 import { MyContext } from '../Context';
 import  axios from 'axios';
 import VideoCategory from './VideoCategory';
@@ -7,7 +7,7 @@ function Videos() {
   const { data, dispatch } = useContext(MyContext);
   const [haveVideos, isHavingVideos] = useState(false);
 
-  const fetchVideo = (item) => {
+  const fetchVideo = useCallback((item) => {
      
       axios.get('https://www.googleapis.com/youtube/v3/search', {
         params: {
@@ -34,27 +34,28 @@ function Videos() {
             dispatch({ type: 'ERROR', payload: 'Something went wrong!'})
           }
         })
-  }
+  }, [dispatch])
 
-  React.useEffect(() => {
+  useEffect(() => {
       data.category.map(item => {
         fetchVideo(item)
+        return null;
       })
       setTimeout(() => isHavingVideos(true), 2000);
-  }, [haveVideos])
+  }, [haveVideos, data.category, fetchVideo])
 
   
   if(data.error){
     return(
-      <div className="text-center mt-3">
-        <h2>{data.error}</h2>
-        <p className="text-muted lead">Try again with reloading the page.</p>
+      <div className="text-center mt-3 mt-md-4 mx-2">
+        <h1>{data.error}</h1>
+        <p className="text-muted">Try again with reloading the page.</p>
       </div>
     )
   } else if(!haveVideos) {
     return (
-      <div className="text-center mt-3">
-       <p className="lead">Please wait...</p>
+      <div className="text-center mt-3 mt-md-4">
+       <p>Please wait...</p>
       </div>
       )
   } else {

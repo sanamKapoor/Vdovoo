@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useCallback } from 'react';
 import { MyContext } from '../Context';
 
 function Modal() {
@@ -8,11 +8,7 @@ function Modal() {
   const [toggleDislike, setTogglDislike] = useState(false)
   const [toggleSave, setToggleSave] = useState(false)
 
-  useEffect(() => {
-    init(data.video);
-  }, [data.video])
-
-  const init = (currentVideo) => {
+  const init = useCallback((currentVideo) => {
     let user = fetchCurrentUser(JSON.parse(localStorage.getItem('users')));
     let likedVideos = user.likeVDO;
     let dislikedVideos = user.dislikeVDO;
@@ -22,7 +18,8 @@ function Modal() {
       likedVideos.map(video => {
         if(video === currentVideo){
           setToggleLike(true)
-        }
+        } 
+        return null;
       })
     }
 
@@ -31,6 +28,7 @@ function Modal() {
         if(video === currentVideo){
           setTogglDislike(true)
         }
+        return null;
       })
     }
 
@@ -39,9 +37,14 @@ function Modal() {
         if(video === currentVideo){
           setToggleSave(true)
         }
+        return null;
       })
     }
-  }
+  }, [])
+
+  useEffect(() => {
+    init(data.video);
+  }, [data.video, init])
 
   const onClick = (type) => {
     saveVideo(type)
@@ -70,6 +73,7 @@ function Modal() {
           let index = videoType.indexOf(video);
           videoType.splice(index, 1)
         }
+        return null;
       })
     } else {
       videoType.pop(currentVDO)
@@ -83,6 +87,7 @@ function Modal() {
         if(video === currentVDO){
           isThere = true;
         }
+        return null;
       })
 
       if(!isThere){
@@ -104,6 +109,7 @@ function Modal() {
         if(user.email === currentUser.email && user.password === currentUser.password){
           sameUser = user
         }
+        return null;
       })
     }
 
@@ -131,6 +137,7 @@ function Modal() {
                       let index = sameUser.dislikeVDO.indexOf(video);
                       sameUser.dislikeVDO.splice(index, 1)
                     }
+                    return null;
                   })
                 } 
               }
@@ -144,6 +151,7 @@ function Modal() {
                       let index = sameUser.likeVDO.indexOf(video);
                       sameUser.likeVDO.splice(index, 1)
                     }
+                    return null;
                   })
                 } 
               }
@@ -197,19 +205,19 @@ function Modal() {
               <i 
                 onClick={e => onClick('like')} 
                 className={`fas fa-thumbs-up fa-1x text-center ${toggleLike ? 'text-primary' : 'text-light' }`}></i>
-              <span>Like</span>
+              <small>Like</small>
             </div>
             <div className="mx-3 d-flex flex-column">
               <i 
                 onClick={e => onClick('dislike')} 
                 className={`fas fa-thumbs-down fa-1x text-center ${toggleDislike ? 'text-primary' : 'text-light' }`}></i>
-              <span>Dislike</span>
+              <small>Dislike</small>
             </div>
             <div className="mx-3 d-flex flex-column">
               <i 
                 onClick={e => onClick('save')} 
                 className={`fas fa-download fa-1x text-center ${toggleSave ? 'text-primary' : 'text-light'} `}></i>
-              <span>Save</span>
+              <small>Save</small>
             </div>
           </div>
           <div className="col-6"></div>

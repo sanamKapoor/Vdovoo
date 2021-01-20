@@ -24,7 +24,10 @@ function Home() {
     return (
       <>
       <Header search={true} />
-      <Videos />   
+      <Videos />  
+      <div className="py-1 py-md-2 text-center text-sm-right watermark mt-5"> 
+          <span className="mx-2">Made with <span aria-label="img" role="img">❤️</span> by Sanam Kapoor</span>
+      </div>
       </>
     )
   } else {

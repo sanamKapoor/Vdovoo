@@ -31,7 +31,7 @@ function Header({ search }) {
 
   return (
     <nav className="navbar row mx-auto px-3 px-md-5">
-      <Link to="/home" className="col-md-3 col-3 navbar-brand font-weight-bold text-light h4">
+      <Link to="/home" className="col-md-3 col-3 navbar-brand font-weight-bold text-light h4 text-left">
         VDOVOO
       </Link>
       {
@@ -41,22 +41,22 @@ function Header({ search }) {
         value={searchQuery} 
         onChange={e => setSearchQuery(e.target.value)} 
         onKeyPress={e => handleSearch(e)}
-        className="col-md-5 col-12 mx-auto mt-3 mt-md-0 order-md-2 order-3 form-control" 
+        className="col-md-5 col-11 mx-auto mt-3 mt-md-0 order-md-2 order-3 form-control" 
         type="search" placeholder="Search" />
         :
         ''
       }
       
-      <div className="col-md-3 col-7 order-md-3 order-2 align-self-center text-center">
+      <div className="col-sm-3 col-7 order-md-3 order-2 align-self-center text-right text-md-center">
       <div className="btn-group">
-        <button className="btn btn-outline-light btn-sm dropdown-toggle px-3 py-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i className="far fa-user fa-2x pr-2"></i>
+        <button className="btn btn-outline-light btn-sm dropdown-toggle px-2 px-md-3 py-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i className="far fa-user fa-1x pr-1"></i>
         </button>
-        <div className="dropdown-menu text-center">
-          <Link to="/profile/like" className="dropdown-item" >Like Video</Link>
-          <Link to="/profile/dislike" className="dropdown-item" >Dislike Video</Link>
-          <Link to="/profile/save" className="dropdown-item" >Save Video</Link>
-          <Link to="/" onClick={() => sessionStorage.removeItem('user')} className="btn btn-secondary btn-sm">Logout</Link>
+        <div className="dropdown-menu text-left text-md-center">
+          <Link to="/profile/like" className="dropdown-item mx-0" >Liked</Link>
+          <Link to="/profile/dislike" className="dropdown-item mx-0" >Disliked</Link>
+          <Link to="/profile/save" className="dropdown-item mx-0" >Saved</Link>
+          <Link to="/" onClick={() => sessionStorage.removeItem('user')} className="btn btn-secondary btn-sm my-1 mx-2 mx-md-0">Logout</Link>
         </div>
       </div>
     </div>

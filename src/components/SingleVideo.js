@@ -5,7 +5,7 @@ import Modal from './Modal';
 function SingleVideo({data}) {
 
   const { dispatch } = useContext(MyContext);
-  const [showModal, isShowModal] = useState(false);
+  const [showModal, isShowModal] = useState(true);
 
   const handleVideo = (id) => {
     isShowModal(true);
@@ -14,15 +14,14 @@ function SingleVideo({data}) {
 
   return (
     <>
-    <div className="card p-0 bg-secondary my-2 my-md-3" >
+    <div className="card p-0 bg-secondary my-1 my-sm-2 my-md-3" >
         <img 
           onClick={() => handleVideo(data.id.videoId)} 
           src={data.snippet.thumbnails.high.url} 
-          height="270" 
-          alt={data.snippet.title} 
+          alt="" 
           data-toggle="modal" data-target=".exampleModalCenter"
           className="card-img" />
-        <div className="card-title px-2 pt-2">
+        <div className="card-title px-2 pt-2 text-truncate">
           {data.snippet.title}
         </div>
     </div>

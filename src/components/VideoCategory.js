@@ -16,29 +16,30 @@ function VideoCategory() {
     } 
     else {
       if(fetchOnce){
-        data.category.map(data => {
-          let videos = JSON.parse(localStorage.getItem(data));
-          setAllVideos(prev => [...prev, { type: data, videos: videos }])
-        })
+          for(let d of data.category){
+              let videos = JSON.parse(localStorage.getItem(d));
+              setAllVideos(prev => [...prev, { type: d, videos: videos }])
+            }
+          }
 
         setFetchOnce(false);
       }
-    }
     
-  }, [data.searchResult, data.category, fetchOnce])
+  }, [data, fetchOnce])
 
-  
   return (
     <div className="container-fluid">
       {
         otherVideos.length > 0 ? 
             <div>
-              <h3 className="text-capitalize">Search Results</h3>
-              <div className="video-row">
+              <h1 className="text-capitalize">Search Results</h1>
+              <div className="video-row my-2 my-md-3">
                 {
                   otherVideos.map((video) => {
                   if(video.id.videoId){
                     return <SingleVideo data={video} key={video.etag} />
+                  } else {
+                    return null;
                   }
                   })
                 }
