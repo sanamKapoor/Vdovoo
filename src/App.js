@@ -1,22 +1,32 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
-import Login from './components/Login';
-import Error from './components/Error';
-import Home from './components/Home';
 import Context from './Context';
-import ProfileData from './components/ProfileData';
+
+const Login = React.lazy(() => import('./components/Login'));
+const Error = React.lazy(() => import('./components/Error'));
+const Home = React.lazy(() => import('./components/Home'));
+const ProfileData = React.lazy(() => import('./components/ProfileData'));
+
 
 function App() {
   return (
     <Router>
-      <Context>
-      <Switch>
-        <Route exact path="/" component={Login} />
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/profile/:query" component={ProfileData} />
-        <Route path="*" component={Error} />
-      </Switch>
-      </Context>
+      <Suspense fallback={
+      <div className="vw-100 vh-100 d-flex justify-content-center align-items-center">
+        <div className="spinner-border text-light" role="status">
+            <span className="sr-only">Loading...</span>
+         </div>
+        </div>
+      }>
+        <Context>
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/profile/:query" component={ProfileData} />
+            <Route path="*" component={Error} />
+          </Switch>
+        </Context>
+      </Suspense>
     </Router>
   );
 }
