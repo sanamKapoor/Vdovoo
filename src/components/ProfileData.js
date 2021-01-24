@@ -90,7 +90,7 @@ function ProfileData() {
     <div className="container-fluid mb-4 mb-sm-5">
      <div className="my-2 my-md-3">
       <Link to="/home">
-        <i className="fa fa-arrow-left text-light my-1 my-sm-2"></i>
+        <i className="fa fa-arrow-left text-light my-2"></i>
       </Link>
       <h1 className="text-capitalize">{type}</h1>
       {
