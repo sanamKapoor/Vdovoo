@@ -28,7 +28,7 @@ function VideoCategory() {
   }, [data, fetchOnce])
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid mb-4 mb-sm-5">
       {
         otherVideos.length > 0 ? 
             <div>

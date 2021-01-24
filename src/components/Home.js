@@ -25,7 +25,7 @@ function Home() {
       <>
       <Header search={true} />
       <Videos />  
-      <div className="py-1 py-md-2 text-center text-sm-right watermark mt-5"> 
+      <div className="py-1 py-md-2 text-center text-sm-right watermark"> 
           <span className="mx-2">Made with <span aria-label="img" role="img">❤️</span> by Sanam Kapoor</span>
       </div>
       </>

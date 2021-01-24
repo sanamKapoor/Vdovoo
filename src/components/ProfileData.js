@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import Header from './Header';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import SingleVideo from './SingleVideo';
 import { useHistory } from 'react-router-dom';
 
@@ -87,8 +87,11 @@ function ProfileData() {
   return (
     <>
     <Header search={false} />
-    <div className="container-fluid">
+    <div className="container-fluid mb-4 mb-sm-5">
      <div className="my-2 my-md-3">
+      <Link to="/home">
+        <i className="fa fa-arrow-left text-light my-1 my-sm-2"></i>
+      </Link>
       <h1 className="text-capitalize">{type}</h1>
       {
         videos.length > 0
@@ -112,7 +115,7 @@ function ProfileData() {
       }
      </div>
      </div>
-     <div className="py-1 py-md-2 text-center text-sm-right watermark mt-5"> 
+     <div className="py-1 py-md-2 text-center text-sm-right watermark"> 
           <span className="mx-2">Made with <span aria-label="img" role="img">❤️</span> by Sanam Kapoor</span>
       </div>
     </>

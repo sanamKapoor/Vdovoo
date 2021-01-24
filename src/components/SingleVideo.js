@@ -14,7 +14,9 @@ function SingleVideo({data}) {
 
   return (
     <>
-    <div className="card p-0 bg-secondary my-1 my-sm-2 my-md-3" >
+      {
+      data.snippet.thumbnails.high.url ?
+      <div className="card p-0 bg-secondary my-1 my-sm-2 my-md-3" >
         <img 
           onClick={() => handleVideo(data.id.videoId)} 
           src={data.snippet.thumbnails.high.url} 
@@ -24,9 +26,11 @@ function SingleVideo({data}) {
         <div className="card-title px-2 pt-2 text-truncate">
           {data.snippet.title}
         </div>
-    </div>
-
-    { showModal ? <Modal /> : ''}
+      </div>
+        :
+        ''
+      }
+      { showModal ? <Modal /> : ''}
     </>
   )
 }
