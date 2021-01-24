@@ -70,6 +70,10 @@ h1{
   cursor: pointer;
 }
 
+.modal-icon i{
+  cursor: pointer;
+}
+
 .watermark{
   background-color:  rgb(39,85,111);
   position: fixed;

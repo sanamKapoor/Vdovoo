@@ -201,19 +201,19 @@ function Modal() {
             :  
           <div className="row">
             <div className="col-6 d-flex">
-            <div className="mx-3 d-flex flex-column">
+            <div className="mx-3 d-flex flex-column modal-icon">
               <i 
                 onClick={e => onClick('like')} 
                 className={`fas fa-thumbs-up fa-1x text-center ${toggleLike ? 'text-primary' : 'text-light' }`}></i>
               <small>Like</small>
             </div>
-            <div className="mx-3 d-flex flex-column">
+            <div className="mx-3 d-flex flex-column modal-icon">
               <i 
                 onClick={e => onClick('dislike')} 
                 className={`fas fa-thumbs-down fa-1x text-center ${toggleDislike ? 'text-primary' : 'text-light' }`}></i>
               <small>Dislike</small>
             </div>
-            <div className="mx-3 d-flex flex-column">
+            <div className="mx-3 d-flex flex-column modal-icon">
               <i 
                 onClick={e => onClick('save')} 
                 className={`fas fa-download fa-1x text-center ${toggleSave ? 'text-primary' : 'text-light'} `}></i>
