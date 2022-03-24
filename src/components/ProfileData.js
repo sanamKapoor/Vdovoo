@@ -32,15 +32,15 @@ function ProfileData() {
 
     if(sameUser){
       if(query === 'like'){
-        setType('Like Videos');
+        setType('Liked Videos');
         getVideoType(sameUser.likeVDO)      
       } 
       else if(query === 'dislike') {
-        setType('DisLike Videos');
+        setType('Disliked Videos');
         getVideoType(sameUser.dislikeVDO)
       }
       else if(query === 'save') {
-        setType('Save Videos');
+        setType('Saved Videos');
         getVideoType(sameUser.saveVDO)
       }
       else {
@@ -92,7 +92,7 @@ function ProfileData() {
       <Link to="/home">
         <i className="fa fa-arrow-left text-light my-2"></i>
       </Link>
-      <h1 className="text-capitalize">{type}</h1>
+      <h1 className="text-capitalize mt-4">{type}</h1>
       {
         videos.length > 0
         ?
