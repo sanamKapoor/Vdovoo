@@ -92,7 +92,7 @@ function ProfileData() {
       <Link to="/home">
         <i className="fa fa-arrow-left text-light my-2"></i>
       </Link>
-      <h1 className="text-capitalize mt-4">{type}</h1>
+      <h1 className="text-capitalize mt-2 mb-4">{type}</h1>
       {
         videos.length > 0
         ?
