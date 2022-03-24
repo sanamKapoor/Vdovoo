@@ -52,7 +52,7 @@ function Header({ search }) {
         <button className="btn btn-outline-light btn-sm dropdown-toggle px-2 px-md-3 py-1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i className="far fa-user fa-1x pr-1"></i>
         </button>
-        <div className="dropdown-menu text-left text-md-center">
+        <div className="dropdown-menu dropdown-menu-right text-center">
           <Link to="/profile/like" className="dropdown-item mx-0" >Liked</Link>
           <Link to="/profile/dislike" className="dropdown-item mx-0" >Disliked</Link>
           <Link to="/profile/save" className="dropdown-item mx-0" >Saved</Link>
