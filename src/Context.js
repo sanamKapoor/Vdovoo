@@ -5,7 +5,7 @@ const initialState = {
   video: {},
   error: '',
   loading: true,
-  category: ['ncs', 'react native', 'full stack development', 'machine learning', 'gaming'],
+  category: ['web3', 'web development', 'machine learning', 'nft', 'gaming'],
   searchResult: [],
   hide: false,
 };
