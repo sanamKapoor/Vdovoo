@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e0f592547dce25c6e54c1ba8f43cc2e",
+    "revision": "3a77d1177c026eeea0ab1974889ca389",
     "url": "/Vdovoo/index.html"
   },
   {
-    "revision": "4a1b1c7e4485dc59af92",
+    "revision": "658a13db1f3c230954d7",
     "url": "/Vdovoo/static/css/main.56b595c8.chunk.css"
   },
   {
@@ -12,12 +12,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Vdovoo/static/js/0.a4298a21.chunk.js"
   },
   {
-    "revision": "04569601696e18435e90",
-    "url": "/Vdovoo/static/js/3.dc906a49.chunk.js"
+    "revision": "c4a9f92b59612baacb0e",
+    "url": "/Vdovoo/static/js/3.70cf270c.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/Vdovoo/static/js/3.dc906a49.chunk.js.LICENSE.txt"
+    "url": "/Vdovoo/static/js/3.70cf270c.chunk.js.LICENSE.txt"
   },
   {
     "revision": "01eeeb9df863acbea668",
@@ -28,28 +28,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Vdovoo/static/js/4.8da0d805.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "df6af5e2a21bbd90e683",
-    "url": "/Vdovoo/static/js/5.c0a26321.chunk.js"
+    "revision": "d97f05acf363cce614fc",
+    "url": "/Vdovoo/static/js/5.40757629.chunk.js"
   },
   {
-    "revision": "bb6a7d5f5dc8725d4eff",
-    "url": "/Vdovoo/static/js/6.9462747e.chunk.js"
+    "revision": "7538c32a2f234e4d76d2",
+    "url": "/Vdovoo/static/js/6.75d902e8.chunk.js"
   },
   {
-    "revision": "92c55cd1fb0db1e012ce",
-    "url": "/Vdovoo/static/js/7.da31b974.chunk.js"
+    "revision": "d755f76d804ee37c292f",
+    "url": "/Vdovoo/static/js/7.3c016d8e.chunk.js"
   },
   {
     "revision": "844e6c5ef2ba328578c5",
     "url": "/Vdovoo/static/js/8.fa28c110.chunk.js"
   },
   {
-    "revision": "4a1b1c7e4485dc59af92",
-    "url": "/Vdovoo/static/js/main.d44b35a7.chunk.js"
+    "revision": "658a13db1f3c230954d7",
+    "url": "/Vdovoo/static/js/main.c55cd437.chunk.js"
   },
   {
-    "revision": "96fdceec168386180dd0",
-    "url": "/Vdovoo/static/js/runtime-main.cf721016.js"
+    "revision": "e1fb51d74351f83f9a63",
+    "url": "/Vdovoo/static/js/runtime-main.1bed35c2.js"
   },
   {
     "revision": "6d18dc91fdcb7c3638353164a446a49d",
