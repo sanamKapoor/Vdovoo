@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Vdovoo/precache-manifest.b4bcdb803b18f823795d9293cf62dabd.js"
+  "/Vdovoo/precache-manifest.a6bd35e2928f9dfd240ce8099bdb6233.js"
 );
 
 self.addEventListener('message', (event) => {
