@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aeb4dfaef5a23d94435b908bda6b98a9",
+    "revision": "9e0f592547dce25c6e54c1ba8f43cc2e",
     "url": "/Vdovoo/index.html"
   },
   {
-    "revision": "c5be3f5bbe092ec2193b",
+    "revision": "4a1b1c7e4485dc59af92",
     "url": "/Vdovoo/static/css/main.56b595c8.chunk.css"
   },
   {
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Vdovoo/static/js/8.fa28c110.chunk.js"
   },
   {
-    "revision": "c5be3f5bbe092ec2193b",
-    "url": "/Vdovoo/static/js/main.ae964df7.chunk.js"
+    "revision": "4a1b1c7e4485dc59af92",
+    "url": "/Vdovoo/static/js/main.d44b35a7.chunk.js"
   },
   {
     "revision": "96fdceec168386180dd0",
