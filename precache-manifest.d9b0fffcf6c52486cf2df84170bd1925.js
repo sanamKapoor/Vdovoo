@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bb1d1a8fe89eac4bc78007297def7f8b",
+    "revision": "0230be8f17000f3ad348d665c5d1a5dd",
     "url": "/Vdovoo/index.html"
   },
   {
@@ -28,28 +28,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Vdovoo/static/js/4.8da0d805.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "681fdaa7fdbd015c858f",
-    "url": "/Vdovoo/static/js/5.30540322.chunk.js"
+    "revision": "b85ba95c436334a9f8c0",
+    "url": "/Vdovoo/static/js/5.71ffb011.chunk.js"
   },
   {
-    "revision": "ba2b8e3221fbe271c652",
-    "url": "/Vdovoo/static/js/6.9066bbf2.chunk.js"
+    "revision": "27d09e02b62116dd7f8c",
+    "url": "/Vdovoo/static/js/6.8da91af2.chunk.js"
   },
   {
-    "revision": "d755f76d804ee37c292f",
-    "url": "/Vdovoo/static/js/7.3c016d8e.chunk.js"
+    "revision": "d629ce95a5047f804fcd",
+    "url": "/Vdovoo/static/js/7.a5361e21.chunk.js"
   },
   {
-    "revision": "732c72886ba8ebf02c28",
-    "url": "/Vdovoo/static/js/8.e9d212b5.chunk.js"
+    "revision": "600d617b98a02dc0829a",
+    "url": "/Vdovoo/static/js/8.d301bdc9.chunk.js"
   },
   {
     "revision": "4a7a5a127232bd365d80",
     "url": "/Vdovoo/static/js/main.ee5714ac.chunk.js"
   },
   {
-    "revision": "2058320e588c24bc3c2d",
-    "url": "/Vdovoo/static/js/runtime-main.9d11262a.js"
+    "revision": "5edfe6f70e8e3cd6ca5f",
+    "url": "/Vdovoo/static/js/runtime-main.fa026f8c.js"
   },
   {
     "revision": "6d18dc91fdcb7c3638353164a446a49d",
