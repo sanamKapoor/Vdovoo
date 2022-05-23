@@ -3,8 +3,8 @@
     "static/js/0.a4298a21.chunk.js": "/Vdovoo/static/js/0.a4298a21.chunk.js",
     "static/js/0.a4298a21.chunk.js.map": "/Vdovoo/static/js/0.a4298a21.chunk.js.map",
     "main.css": "/Vdovoo/static/css/main.56b595c8.chunk.css",
-    "main.js": "/Vdovoo/static/js/main.c55cd437.chunk.js",
-    "main.js.map": "/Vdovoo/static/js/main.c55cd437.chunk.js.map",
+    "main.js": "/Vdovoo/static/js/main.b25b1320.chunk.js",
+    "main.js.map": "/Vdovoo/static/js/main.b25b1320.chunk.js.map",
     "runtime-main.js": "/Vdovoo/static/js/runtime-main.1bed35c2.js",
     "runtime-main.js.map": "/Vdovoo/static/js/runtime-main.1bed35c2.js.map",
     "static/js/3.70cf270c.chunk.js": "/Vdovoo/static/js/3.70cf270c.chunk.js",
@@ -20,7 +20,7 @@
     "static/js/8.fa28c110.chunk.js": "/Vdovoo/static/js/8.fa28c110.chunk.js",
     "static/js/8.fa28c110.chunk.js.map": "/Vdovoo/static/js/8.fa28c110.chunk.js.map",
     "index.html": "/Vdovoo/index.html",
-    "precache-manifest.8160fb19faa5e9a822c722d195c81d8a.js": "/Vdovoo/precache-manifest.8160fb19faa5e9a822c722d195c81d8a.js",
+    "precache-manifest.b4bcdb803b18f823795d9293cf62dabd.js": "/Vdovoo/precache-manifest.b4bcdb803b18f823795d9293cf62dabd.js",
     "service-worker.js": "/Vdovoo/service-worker.js",
     "static/css/main.56b595c8.chunk.css.map": "/Vdovoo/static/css/main.56b595c8.chunk.css.map",
     "static/js/3.70cf270c.chunk.js.LICENSE.txt": "/Vdovoo/static/js/3.70cf270c.chunk.js.LICENSE.txt",
@@ -31,6 +31,6 @@
     "static/js/runtime-main.1bed35c2.js",
     "static/js/3.70cf270c.chunk.js",
     "static/css/main.56b595c8.chunk.css",
-    "static/js/main.c55cd437.chunk.js"
+    "static/js/main.b25b1320.chunk.js"
   ]
 }
