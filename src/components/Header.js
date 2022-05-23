@@ -56,7 +56,7 @@ function Header({ search }) {
           <Link to="/profile/like" className="dropdown-item mx-0" >Liked</Link>
           <Link to="/profile/dislike" className="dropdown-item mx-0" >Disliked</Link>
           <Link to="/profile/save" className="dropdown-item mx-0" >Saved</Link>
-          <Link to="/" onClick={() => localStorage.removeItem('user')} className="btn btn-secondary btn-sm my-1 mx-2 mx-md-0">Logout</Link>
+          <Link to="/" onClick={() => localStorage.removeItem('vdovoo_user')} className="btn btn-secondary btn-sm my-1 mx-2 mx-md-0">Logout</Link>
         </div>
       </div>
     </div>

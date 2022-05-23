@@ -20,7 +20,7 @@ function Login() {
           email: user.email,
           password: user.password
         }
-        localStorage.setItem('user', JSON.stringify(userData))
+        localStorage.setItem('vdovoo_user', JSON.stringify(userData))
         history.push('/home');
         reset();
         return;
@@ -73,7 +73,7 @@ function Login() {
 
       let Users = [];
       Users.push(user);
-      localStorage.setItem('users', JSON.stringify(Users));
+      localStorage.setItem('vdovoo_users', JSON.stringify(Users));
       
       reset();
       setLogin(true);
@@ -101,9 +101,9 @@ function Login() {
       saveVDO: []
     }
 
-    let users = JSON.parse(localStorage.getItem('users'));
+    let users = JSON.parse(localStorage.getItem('vdovoo_users'));
     users.push(user);
-    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('vdovoo_users', JSON.stringify(users));
     setLogin(true);
 
     reset();
@@ -113,7 +113,7 @@ function Login() {
  
   const Submit = values => {
 
-    let users = JSON.parse(localStorage.getItem('users'));
+    let users = JSON.parse(localStorage.getItem('vdovoo_users'));
 
     if(users){
       for(let user of users){

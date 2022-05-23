@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Error() {
 
   useEffect(() => {
-    localStorage.removeItem('user');
+    localStorage.removeItem('vdovoo_user');
   }, [])
 
   return (

@@ -9,7 +9,7 @@ function Modal() {
   const [toggleSave, setToggleSave] = useState(false)
 
   const init = useCallback((currentVideo) => {
-    let user = fetchCurrentUser(JSON.parse(localStorage.getItem('users')));
+    let user = fetchCurrentUser(JSON.parse(localStorage.getItem('vdovoo_users')));
     let likedVideos = user.likeVDO;
     let dislikedVideos = user.dislikeVDO;
     let saveVideos = user.saveVDO;
@@ -102,7 +102,7 @@ function Modal() {
 
   const fetchCurrentUser = (storedUsers) => {
     let sameUser;
-    let currentUser = JSON.parse(localStorage.getItem('user'));
+    let currentUser = JSON.parse(localStorage.getItem('vdovoo_user'));
 
     if(storedUsers.length > 0){
       storedUsers.filter(user => {
@@ -117,7 +117,7 @@ function Modal() {
   }
 
   const saveVideo = type => {
-    let storedUsers = JSON.parse(localStorage.getItem('users'));
+    let storedUsers = JSON.parse(localStorage.getItem('vdovoo_users'));
     let sameUser = fetchCurrentUser(storedUsers);
     let currentVideo;
     
@@ -163,7 +163,7 @@ function Modal() {
           }
     }
   
-    localStorage.setItem('users', JSON.stringify(storedUsers)); 
+    localStorage.setItem('vdovoo_users', JSON.stringify(storedUsers)); 
   }
 
  

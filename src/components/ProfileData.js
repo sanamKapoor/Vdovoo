@@ -17,7 +17,7 @@ function ProfileData() {
   const fetchVideos = useCallback((storedUsers) => {
     let sameUser;
 
-    let currentUser = JSON.parse(localStorage.getItem('user'))
+    let currentUser = JSON.parse(localStorage.getItem('vdovoo_user'))
 
     if(currentUser){
       if(storedUsers.length > 0){
@@ -56,7 +56,7 @@ function ProfileData() {
     getVideos([]);
     setError(error)
 
-    fetchVideos(JSON.parse(localStorage.getItem('users')))
+    fetchVideos(JSON.parse(localStorage.getItem('vdovoo_users')))
   }, [ query, error, fetchVideos ])
 
   const getVideoType = (videoType) => {

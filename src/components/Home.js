@@ -8,7 +8,7 @@ function Home() {
   let history = useHistory();
 
   
-  if(JSON.parse(localStorage.getItem('user'))){
+  if(JSON.parse(localStorage.getItem('vdovoo_user'))){
     return (
       <>
       <Header search={true} />
