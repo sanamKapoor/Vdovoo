@@ -10,7 +10,6 @@ const ProfileData = React.lazy(() => import('./components/ProfileData'));
 
 function App() {
   return (
-    <HashRouter>
       <Suspense fallback={
       <div className="vw-100 vh-100 d-flex justify-content-center align-items-center">
         <div className="spinner-border text-light" role="status">
@@ -18,6 +17,7 @@ function App() {
          </div>
       </div>
       }>
+      <HashRouter>
         <Context>
           <Switch>
             <Route exact path="/" component={Login} />
@@ -26,8 +26,8 @@ function App() {
             <Route path="*" component={Error} />
           </Switch>
         </Context>
+      </HashRouter>
       </Suspense>
-    </HashRouter>
   );
 }
 
