@@ -23,7 +23,7 @@ function App() {
             <Route exact path="/" component={Login} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/profile/:query" component={ProfileData} />
-            <Route path="*" component={Error} />
+            <Route path="*" component={Home} />
           </Switch>
         </Context>
       </Suspense>
