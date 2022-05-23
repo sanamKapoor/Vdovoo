@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Switch, HashRouter, Route } from 'react-router-dom';
 import Context from './Context';
 
 const Login = React.lazy(() => import('./components/Login'));
@@ -10,7 +10,7 @@ const ProfileData = React.lazy(() => import('./components/ProfileData'));
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Suspense fallback={
       <div className="vw-100 vh-100 d-flex justify-content-center align-items-center">
         <div className="spinner-border text-light" role="status">
@@ -23,11 +23,11 @@ function App() {
             <Route exact path="/" component={Login} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/profile/:query" component={ProfileData} />
-            <Route path="*" component={Home} />
+            <Route path="*" component={Error} />
           </Switch>
         </Context>
       </Suspense>
-    </Router>
+    </HashRouter>
   );
 }
 
