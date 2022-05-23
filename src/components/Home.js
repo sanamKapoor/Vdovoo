@@ -8,7 +8,7 @@ function Home() {
   let history = useHistory();
 
   
-  if(JSON.parse(sessionStorage.getItem('user'))){
+  if(JSON.parse(localStorage.getItem('user'))){
     return (
       <>
       <Header search={true} />

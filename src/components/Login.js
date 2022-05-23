@@ -20,7 +20,7 @@ function Login() {
           email: user.email,
           password: user.password
         }
-        sessionStorage.setItem('user', JSON.stringify(userData))
+        localStorage.setItem('user', JSON.stringify(userData))
         history.push('/home');
         reset();
         return;

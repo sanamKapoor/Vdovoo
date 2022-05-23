@@ -102,7 +102,7 @@ function Modal() {
 
   const fetchCurrentUser = (storedUsers) => {
     let sameUser;
-    let currentUser = JSON.parse(sessionStorage.getItem('user'));
+    let currentUser = JSON.parse(localStorage.getItem('user'));
 
     if(storedUsers.length > 0){
       storedUsers.filter(user => {

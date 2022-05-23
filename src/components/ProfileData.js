@@ -17,7 +17,7 @@ function ProfileData() {
   const fetchVideos = useCallback((storedUsers) => {
     let sameUser;
 
-    let currentUser = JSON.parse(sessionStorage.getItem('user'))
+    let currentUser = JSON.parse(localStorage.getItem('user'))
 
     if(currentUser){
       if(storedUsers.length > 0){
