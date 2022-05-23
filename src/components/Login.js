@@ -16,7 +16,12 @@ function Login() {
     if(islogin){
       
       if(user.email === values.email && user.password === values.password){
-        history.push('/home', { user: user });
+        let userData = {
+          email: user.email,
+          password: user.password
+        }
+        sessionStorage.setItem('user', JSON.stringify(userData))
+        history.push('/home');
         reset();
         return;
       } 
